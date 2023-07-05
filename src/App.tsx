@@ -12,6 +12,10 @@ import ErrorPage from './pages/errors/error-page'
 import { ErrorHandler } from './handler/error.request'
 const router = createBrowserRouter([
 	{
+		path: '*',
+		element: <ErrorPage />
+	},
+	{
 		path: '/',
 		loader: loader,
 		element: <Root />,
@@ -34,10 +38,6 @@ const router = createBrowserRouter([
 	{
 		path: '/login',
 		element: <LoginForm />
-	},
-	{
-		path: '*',
-		element: <ErrorPage />
 	}
 ])
 function App() {
