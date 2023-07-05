@@ -34,11 +34,11 @@ const router = createBrowserRouter([
 	{
 		path: '/login',
 		element: <LoginForm />
+	},
+	{
+		path: '*',
+		element: <ErrorPage />
 	}
-	// {
-	// 	path: '*',
-	// 	element: <ErrorPage />
-	// }
 ])
 function App() {
 	return (
